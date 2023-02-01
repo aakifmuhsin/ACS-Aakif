@@ -1,0 +1,10 @@
+h2{
+    text-align: center;
+    color: chartreuse;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+img{
+    position:absolute;
+    right:calc(100% - 95%);
+    top:calc(100% - 70%);
+}
