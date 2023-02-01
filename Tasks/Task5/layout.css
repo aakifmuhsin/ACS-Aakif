@@ -1,0 +1,19 @@
+body{
+    background: black;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+h2{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    letter-spacing: 45px;
+    margin-bottom:-5px;
+    margin-left: 45px;
+}
+hr{
+    height: 15px;
+    background-color: rgb(60, 147, 150);
+    border: black;
+    margin-bottom:-15px;
+}
