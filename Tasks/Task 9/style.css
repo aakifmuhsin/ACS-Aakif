@@ -1,0 +1,29 @@
+.main-section {
+    width: 100%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+table {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.none {
+    border: none;
+}
+
+table, tr, td,th {
+    border: 1px solid black;
+}
+
+.green {
+    background-color: rgb(159, 202, 159);
+}
+.purple {
+    background-color: rgb(164, 154, 192);
+}
+.yellow {
+    background-color: rgb(220, 220, 176);
+}
