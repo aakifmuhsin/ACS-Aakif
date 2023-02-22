@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Family Members</title>
+    <style>
+      .odd {
+        color: red;
+      }
+      .even {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>My Family Members</h1>
+    <ol id="family-list">
+      <li>vicky</li>
+      <li>yazhini</li>
+      <li>nisha</li>
+      <li>sarathakumar</li>
+      <li>kumar</li>
+    </ol>
+
+    <script>
+      // get the list element
+      const familyList = document.getElementById('family-list');
+		console.log(familyList);
+      // Get all the list items
+      const listItems = familyList.getElementsByTagName('li');
+		console.log(listItems)
+      // Add click event listener to each list item
+      for (let i = 0; i < listItems.length; i++) {
+		const listItem = listItems[i];
+		console.log(listItem);
+        listItems[i].addEventListener('click', function() {
+          if (i % 2 === 0) {
+            listItems[i].classList.add('even');
+          } else {
+            listItems[i].classList.add('odd');
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

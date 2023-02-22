@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for= "rangeFrom">rangeFrom: </label>
+    <input id="rangeFrom" type="number" value="0"><br><br>
+    <label for= "rangeTo">rangeTo: </label>
+    <input id="rangeTo" type="number" value="100"><br><br>
+    <label for= "divisibleValue">divisibleValue: </label>
+    <input id="divisibleValue" type="number" value="2"><br><br>
+    <button id="button" type= "submit">submit</button>
+    <p>DivisibleValues</p>
+    <p id="values"></p>
+
+    <script>
+        function divisible() {
+            // get the values of rangeFrom, rangeTo and divisibleValue in their variable
+            let rangeFrom = document.getElementById('rangeFrom').value;
+            
+            let rangeTo = document.getElementById('rangeTo').value;
+            
+            let divisibleValue  = document.getElementById('divisibleValue').value;
+            
+            // loop througth the rangeFrom to RangeTo variable
+            for (let i=rangeFrom;i<=rangeTo;i++){
+                // check for the value i is divisible by divisibleValue in the variable
+                if((i % divisibleValue) == 0){
+                    // print it in the p tag using innerhtml
+                    document.getElementById('values').innerHTML +=[i+","];
+                    // console.log(i);
+                }
+            }
+        }
+    
+        button.addEventListener('click', divisible)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 50px;
+            position: absolute;
+            top: calc(50% - 50px);
+            right: calc(50% - 50px);
+        }
+    </style>
+</head>
+<body id="main">
+    <button id="button">button</button>
+    <script>
+        // random colors
+        const colors = ['red','green','blue','pink','black','violite','olive','yellow','navy','aqua'];
+        const main = document.getElementById('main');
+        const changeButton = document.getElementById('button');
+        // colorCount declared as object to save each color shown in background
+        const colorCounts = {};
+
+        function changeColor() {
+            //get random index value
+            const rand = Math.floor(Math.random() * colors.length);
+            //save the random index value in color
+            const color = colors[rand];
+            main.style.backgroundColor = color;
+            //save the random color value and increment the color if it exist
+            colorCounts[color] = (colorCounts[color] || 0) + 1;
+            console.log(colorCounts);
+        }
+
+        button.addEventListener('click',changeColor);
+    </script>
+</body>
+</html>

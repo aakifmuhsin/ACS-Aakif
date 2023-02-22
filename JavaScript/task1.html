@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      div {
+         width: 50px;
+         margin-bottom: 5px;
+         border: 2px solid black;
+         display: inline-block
+      }
+    </style>
+</head>
+<body>
+
+    <div id="content">A</div>
+    <div id="content">B</div>
+    <div id="content">C</div>
+    <div id="content"> D</div>
+    
+    <script>
+        let answer="";
+        // using querySelector selecting all the div tag
+        let content = document.querySelectorAll('#content');
+        // forEach to iterate over all the div
+        content.forEach((div) => {
+          div.addEventListener('click', () => {
+            content = div.innerHTML;
+            answer += content +",  ";
+            alert(answer);
+          });
+        });
+    </script>
+</body>
+</html>
