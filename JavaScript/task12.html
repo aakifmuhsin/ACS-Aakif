@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            /* background-color: red; */
+            position: absolute;
+            right: calc(50% - 100px);
+            top: calc(50% - 100px);
+            border: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="redio1" val>#ff0000</label>
+        <input type="radio" name="hexcode" id="radio1" class ="radio" value ="#ff0000">
+        <label for="redio2">#00ffff</label>
+        <input type="radio" name="hexcode" id="radio2" class ="radio" value ="#00ffff">
+        <label for="redio3">#0000ff</label>
+        <input type="radio" name="hexcode" id="radio3" class ="radio" value ="#0000ff">
+        <label for="redio4">#00008b</label>
+        <input type="radio" name="hexcode" id="radio4" class ="radio" value ="#00008b">
+        <label for="redio5">#addse6</label>
+        <input type="radio" name="hexcode" id="radio5" class ="radio" value ="#932986">
+        <label for="redio6">#800080</label>
+        <input type="radio" name="hexcode" id="radio6" class ="radio" value ="#800080">
+        <label for="redio7">#ffff00</label>
+        <input type="radio" name="hexcode" id="radio7" class ="radio" value ="#ffff00">
+        <label for="redio8">#00ff00</label>
+        <input type="radio" name="hexcode" id="radio8" class ="radio" value ="#00ff00">
+        <label for="redio9">#ff00ff</label>
+        <input type="radio" name="hexcode" id="radio9" class ="radio" value ="#ff00ff">
+        <label for="redio10">#ffc0cb</label>
+        <input type="radio" name="hexcode" id="radio10" class ="radio" value ="#ffc0cb">
+    </div>
+    <div class="box" id="display"></div>
+    <script>
+        let display= document.getElementById("display");
+        // console.log(display);
+        let clicked= document.querySelectorAll('.radio');
+        // console.log(clicked);
+        clicked.forEach(element => {
+            element.addEventListener('click', () =>{
+                display.style.backgroundColor= element.value;
+                // console.log(colorcode);
+            })
+        });
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    width: 100vw;
+    height: 100vh;
+    border-left: 2px solid rgba(0, 0, 0, 0.856);
+}
+
+.parent-one {
+    width:100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    padding: 10px;
+}
+
+/* .c1 {
+
+} */
+.c-two {
+    width: 100%;
+    height: auto;
+    min-height: 10px;
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+    margin-left: 20px;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+
+.link-one {
+    position: absolute;
+    left: calc(100% - 150px);
+    top:0px;
+}
+.link-two {
+    position: absolute;
+    left: calc(100% - 100px);
+    top: 0px;
+}
+
+.link-three {
+    position: absolute;
+    left: calc(100% - 50px);
+    top: 0px;
+}
+a {
+    color: white;
+    font-size: 15px;
+}
+.parent-two {
+    width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.child {
+    background-color: white;
+    width: 100%;
+    min-height: 10px;
+    padding-bottom: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.856);
+}
+p {
+    padding: 5px;
+}
+
+@media screen and (max-width:768px) and (min-width:481px){
+    .c-two{
+        grid-row: span 1 / 2;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        float: right;
+        right: 0%;
+    }
+    .child,.para,h3 {
+        position: relative;
+        top: 50px;
+    }
+}
+
+@media screen and (max-width:480px) and (min-width:120px) {
+    .c-two{
+        grid-row: span 1 / 2;
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        float: right;
+        right: 0%;
+    }
+    .child,.para,h3 {
+        position: relative;
+        top: 50px;
+    }
+}
+
